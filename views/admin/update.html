@@ -9,7 +9,7 @@
     <form>
     	<table width="100%">
     		<tr>
-    			<th colspan="10">揽件</th>
+    			<th colspan="10">更新</th>
     		</tr>
     		<tr>
 			<td width="50%" align="right">订单号:</td>
@@ -17,8 +17,15 @@
                 <input type="file" name="num" id="num" size="20" >
             </td> 
 		    </tr>	
+            <tr>
+            <td colspan="10">发往：
+                <input name="destnation"  type="radio" value="昆山" checked>昆山
+                <input name="destnation"  type="radio" value="淮安" >淮安
+                <input name="destnation"  type="radio" value="徐州" >徐州
+            </td>
+            </tr>           
     	</table>
     </form>
-    <input align="center" type="button" onclick="operate()" value="揽件" id="bt"/> 
+    <input align="center" type="button" onclick="operate()" value="更新" id="bt"/> 
 </body>
 </html>

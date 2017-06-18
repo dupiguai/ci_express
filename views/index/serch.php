@@ -1,44 +1,18 @@
-<?php
-    header('Content-type: text/html; charset=utf-8');
-    @$ordernumber=$_POST["user"];
-    $ordernumber=htmlspecialchars($ordernumber);
-    include_once('../common/connect.php');
-    $sql = "SELECT express_num,express_address from express_info where express_num = ?";
-    $mysqli_stmt = $conn->prepare($sql);
-     
-    $express_num = $ordernumber;
-    $mysqli_stmt->bind_param('i',$express_num);
-    $mysqli_stmt->bind_result($express_num,$express_address);
-    $mysqli_stmt->execute();
-    $row=array();
-    while($mysqli_stmt->fetch())
-    {
-        $row['express_num']=$express_num;
-        $row['express_address']=$express_address;
-    }
-    //    echo $express_num.'--'.$express_address;
-    //}
-    //$rows=$conn->query($sql);
-    //@$row=$rows->fetch_assoc();
-    @$num=$row['express_num'];//$row["express_num"];
-    @$str=$row['express_address'];//$row["express_address"];
-    $arr = explode("#",$str);
-    $mysqli_stmt->close();
-    $conn->close();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/result.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'styles/index/';?>css/result.css">
 </head>
 <body >
 	<table width="100%" border="0" cellspacing="0" cellpadding="7" style="table-layout: fixed">
 	<?php 
-        if (count($arr)>1) {
+        if($address != '0')
+        {   
+            $arr = explode("#",$address);
             echo "<tr>";
             echo "<th align='right'>订单编号:</th>";
-            echo "<th align='left'>".$num."</th>";
+            echo "<th align='left'>".$expressnum."</th>";
             echo "</tr>";
         // 输出每行数据
             for($index=1;$index<count($arr);$index+=2)

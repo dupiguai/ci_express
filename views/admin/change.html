@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript" src="http://localhost/ci_express/styles/admin/Js/change.js"></script>
+    <link rel="stylesheet" href="http://localhost/ci_express/styles/admin/Css/style.css" />
+</head>
+<body>
+    <form name="form">
+    	<table width="100%" border="1">
+    		<tr>
+    			<th colspan="10">修改密码</th>
+    		</tr>
+    		<tr>
+			<td width="50%" align="right">旧密码：</td>
+			<td width="50%" align="left">
+                <input type="password" name="opsw" id="opsw" size="20" >
+            </td> 
+		    </tr>
+            <tr>
+            <td width="50%" align="right">新密码：</td>
+            <td width="50%" align="left">
+                <input type="password" name="npsw" id="npsw" size="20" >
+            </td> 
+            </tr>   
+            <tr>
+            <td width="50%" align="right">确认新密码：</td>
+            <td width="50%" align="left">
+                <input type="password" name="cnpsw" id="cnpsw" size="20" >
+            </td> 
+            </tr>
+            <textarea id="pubkey" rows="15" cols="65" style="display:none">-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2dWtjFMHKriJb56w/WNOcICDQ
+SH74691pqfwibPDkzdV7xRfNkwiS0UV+Jy2htyguqsLjRXTaECoMhPoXq1RCXZep
+nIW9gj+0UcJ2nZ0PKUfVQvd61tSAZRGhs/YX18f4qOQnH/Dhz1Jvh99R6MEBapCa
+klMkStrhGvyK46QRgQIDAQAB
+-----END PUBLIC KEY-----</textarea>
+    	</table>
+    </form>
+    <input align="center" type="button" onclick="change()" value="确认" id="bt"/> 
+</body>
+</html>

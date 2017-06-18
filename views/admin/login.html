@@ -13,13 +13,13 @@
 		<div class="login">	
 			<form  method="post" id="login" name="form">
 			<div class="title">
-				后盾网 | 登录后台
+				 登录后台
 			</div>
 			<table border="1" width="100%">
 				<tr>
 					<th>管理员帐号:</th>
 					<td>
-						<input type="username" name="username" class="len250" id="username"/>
+						<input type="text" name="username" class="len250" id="username"/>
 					</td>
 				</tr>
 				<tr>
@@ -34,7 +34,12 @@
 						<input type="code" class="len250" name="code" id="cd"/> <img src="http://localhost/ci_express/index.php/admin/login/code" id="code"/> <a href="#" onclick="change_code()">看不清</a>
 					</td>
 				</tr>
-				
+				 <textarea id="pubkey" rows="15" cols="65" style="display:none">-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2dWtjFMHKriJb56w/WNOcICDQ
+SH74691pqfwibPDkzdV7xRfNkwiS0UV+Jy2htyguqsLjRXTaECoMhPoXq1RCXZep
+nIW9gj+0UcJ2nZ0PKUfVQvd61tSAZRGhs/YX18f4qOQnH/Dhz1Jvh99R6MEBapCa
+klMkStrhGvyK46QRgQIDAQAB
+-----END PUBLIC KEY-----</textarea>
 			</table>
 		</form> 
 		<tr>

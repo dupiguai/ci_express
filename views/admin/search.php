@@ -2,23 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <script type="text/javascript" src="http://localhost/ci_express/styles/admin/Js/operate.js"></script>
     <link rel="stylesheet" href="http://localhost/ci_express/styles/admin/Css/style.css" />
 </head>
 <body>
     <form>
     	<table width="100%">
     		<tr>
-    			<th colspan="10">揽件</th>
+    			<th colspan="10">未处理订单信息</th>
     		</tr>
+            <?php foreach($num as $v):?>
     		<tr>
 			<td width="50%" align="right">订单号:</td>
 			<td width="50%" align="left">
-                <input type="file" name="num" id="num" size="20" >
+                <?php echo $v;?>
             </td> 
 		    </tr>	
+            <?php endforeach?>
     	</table>
     </form>
-    <input align="center" type="button" onclick="operate()" value="揽件" id="bt"/> 
 </body>
 </html>

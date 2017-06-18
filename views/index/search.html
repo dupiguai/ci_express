@@ -13,25 +13,17 @@
 
   <body>
   <div class="header">
-  <form name="form1" method="post" action="serch.php" >
+  <form name="form1" method="post" action="http://localhost/ci_express/index.php/index/search/find" >
       <div id="div1">快递查询</div>
       <div id="div2">
        <div id="div3">
         <input type="text" name="user" id="user">
        </div>
        <div id="div4">
-        <input type="submit" name="submit" value="" onClick="return mycheck();">
-       </div>
-       
+        <input type="submit" name="submit" value="">
+       </div> 
       </div>
   </form>
-  <script language="javascript">
-    function mycheck(){
-        if(form1.user.value==""){
-            alert("单号不能为空");form1.user.focus();return false;
-        }
-    }
-    </script>
   </div>
   </body>
 </html>
