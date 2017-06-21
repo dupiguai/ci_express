@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body{
+	text-align: center;
+	margin:0px;
+	padding:0px;
+	background-image:url(../img/cloude.jpg); 
+	height: 800px;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}
+.time{
+	text-align: right;
+	line-height: 200%
+}
+.content{
+   text-align: left;
+   line-height: 200%;
+}
